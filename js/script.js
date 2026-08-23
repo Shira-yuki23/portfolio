@@ -91,7 +91,7 @@ function sendMessage(question) {
   if (!cleanQuestion) return;
   addMessage(cleanQuestion, 'user');
   chatInput.value = '';
-  const typing = addMessage('Shira is thinking…', 'typing');
+  const typing = addMessage('Growing an answer…', 'typing');
   window.setTimeout(() => {
     typing.remove();
     addMessage(answerFor(cleanQuestion), 'assistant');
