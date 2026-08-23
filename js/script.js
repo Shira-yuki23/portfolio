@@ -54,17 +54,17 @@ document.addEventListener('keydown', (event) => {
 });
 
 const responses = [
-  { match: /skill|tool|java|c\+\+|web|html|css|javascript|program/i, text: 'I work with Java (including JavaFX and JDBC), C++, and front-end web tools: HTML, CSS, and JavaScript. My everyday toolkit also includes Git, GitHub, VS Code, and MySQL.' },
-  { match: /melofocus|timer|productivity|study/i, text: 'MeloFocus is one of my projects: a gamified productivity timer that makes study sessions more enjoyable. There’s a JavaFX version and a web version—both are linked in my Projects section.' },
-  { match: /theme|chrome|cinnamoroll|kurumi|hello kitty/i, text: 'I’ve published six pastel Chrome themes, from Cinnamoroll Baby Blue to Kawaii Lavender Dream. You can browse them in my Themes section and open each one in the Chrome Web Store.' },
-  { match: /project|work|portfolio|made|build/i, text: 'My work includes a Chrome theme collection, MeloFocus, this portfolio, a C++ game engine, a Candidate Key Finder, and a cache simulation. The Projects section has the highlights and links.' },
-  { match: /contact|email|hire|linkedin|github|connect/i, text: 'You can reach me by email at farihamusfirat@gmail.com. My GitHub and LinkedIn are also linked in the Contact section.' },
-  { match: /about|who|fariha|shifa/i, text: 'I’m Fariha Musfirat Shifa, a Computer Science undergraduate who enjoys thoughtful software, creative coding, browser customization, UI design, and turning ideas into real applications.' }
+  { match: /skill|tool|java|c\+\+|web|html|css|javascript|program/i, text: 'Fariha works with Java (including JavaFX and JDBC), C++, and front-end web tools: HTML, CSS, and JavaScript. Her everyday toolkit also includes Git, GitHub, VS Code, and MySQL.' },
+  { match: /melofocus|timer|productivity|study/i, text: 'MeloFocus is a gamified productivity timer that makes study sessions more enjoyable. There’s a JavaFX version and a web version—both are linked in the Projects section.' },
+  { match: /theme|chrome|cinnamoroll|kurumi|hello kitty/i, text: 'Fariha has published six pastel Chrome themes, from Cinnamoroll Baby Blue to Kawaii Lavender Dream. You can browse them in the Themes section and open each one in the Chrome Web Store.' },
+  { match: /project|work|portfolio|made|build/i, text: 'Her work includes a Chrome theme collection, MeloFocus, this portfolio, a C++ game engine, a Candidate Key Finder, and a cache simulation. The Projects section has the highlights and links.' },
+  { match: /contact|email|hire|linkedin|github|connect/i, text: 'The easiest way to reach Fariha is by email at farihamusfirat@gmail.com. Her GitHub and LinkedIn are also linked in the Contact section.' },
+  { match: /about|who|fariha|shifa/i, text: 'Fariha Musfirat Shifa is a Computer Science undergraduate who enjoys thoughtful software, creative coding, browser customization, UI design, and turning ideas into real applications.' }
 ];
 
 function answerFor(question) {
   const found = responses.find(({ match }) => match.test(question));
-  return found ? found.text : 'Ask me about my skills, projects, Chrome themes, or how to get in touch! You could start with MeloFocus.';
+  return found ? found.text : 'I can help with Fariha’s skills, projects, Chrome themes, or contact details. Try asking about MeloFocus or how to get in touch!';
 }
 
 function addMessage(text, type) {
@@ -91,7 +91,7 @@ function sendMessage(question) {
   if (!cleanQuestion) return;
   addMessage(cleanQuestion, 'user');
   chatInput.value = '';
-  const typing = addMessage('Shifa is thinking…', 'typing');
+  const typing = addMessage('Shira is thinking…', 'typing');
   window.setTimeout(() => {
     typing.remove();
     addMessage(answerFor(cleanQuestion), 'assistant');
