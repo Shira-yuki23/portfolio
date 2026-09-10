@@ -119,3 +119,217 @@
   background: transparent;
   transform: none;
 }
+
+/* MeloFocus takes the lead as the portfolio's featured build. */
+.melo-showcase {
+  margin-bottom: 22px;
+  padding: 16px;
+  overflow: hidden;
+  background: linear-gradient(145deg, rgba(255, 250, 253, 0.68), rgba(229, 221, 255, 0.5));
+}
+
+.melo-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.melo-shot {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 12px 28px rgba(97, 76, 139, 0.14);
+}
+
+.melo-shot img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.45s ease;
+}
+
+.melo-shot:hover img {
+  transform: scale(1.025);
+}
+
+.melo-shot figcaption {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  border-radius: 999px;
+  color: #63344f;
+  background: rgba(255, 247, 252, 0.88);
+  box-shadow: 0 6px 18px rgba(77, 47, 88, 0.14);
+  font-size: 0.72rem;
+  font-weight: 600;
+  backdrop-filter: blur(12px);
+}
+
+.melo-shot figcaption span {
+  color: #b35c8d;
+  font-family: "DM Mono", monospace;
+  font-size: 0.58rem;
+}
+
+.melo-details {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.78fr) minmax(0, 1.5fr);
+  gap: 48px;
+  padding: 34px 24px 22px;
+}
+
+.melo-kicker,
+.academic-meta {
+  color: #b35c8d;
+  font-family: "DM Mono", monospace;
+  font-size: 0.69rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.melo-details h3 {
+  margin-top: 7px;
+  color: #63344f;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.1rem, 4vw, 3.35rem);
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+}
+
+.melo-details h3 span {
+  font-size: 0.48em;
+  vertical-align: 0.28em;
+}
+
+.melo-copy > p {
+  max-width: 680px;
+  color: var(--muted);
+  font-size: 0.93rem;
+  line-height: 1.75;
+}
+
+.melo-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 22px;
+}
+
+.melo-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  border-radius: 999px;
+  color: #74415e;
+  background: rgba(255, 255, 255, 0.44);
+  font-size: 0.73rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+}
+
+.melo-links a span {
+  color: #ba6695;
+  font-family: "DM Mono", monospace;
+  font-size: 0.58rem;
+}
+
+.melo-links a:hover {
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 8px 20px rgba(139, 71, 111, 0.13);
+  transform: translateY(-2px);
+}
+
+.supporting-projects {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.academic-meta {
+  display: inline-block;
+  margin-top: 20px;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+@media (max-width: 860px) {
+  .melo-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .melo-shot-custom {
+    grid-column: 1 / -1;
+  }
+
+  .melo-shot-custom img {
+    aspect-ratio: 2 / 1;
+  }
+
+  .melo-details {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 650px) {
+  .melo-showcase {
+    padding: 10px;
+  }
+
+  .melo-gallery {
+    display: flex;
+    margin-right: -10px;
+    padding-right: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .melo-gallery::-webkit-scrollbar {
+    display: none;
+  }
+
+  .melo-shot,
+  .melo-shot-custom {
+    width: 88%;
+    flex: 0 0 88%;
+    scroll-snap-align: center;
+  }
+
+  .melo-shot-custom img {
+    aspect-ratio: 16 / 9;
+  }
+
+  .melo-details {
+    padding: 27px 12px 14px;
+  }
+
+  .melo-copy > p {
+    font-size: 0.85rem;
+  }
+
+  .melo-links {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .melo-links a {
+    justify-content: space-between;
+  }
+
+  .supporting-projects {
+    grid-template-columns: 1fr;
+  }
+}
