@@ -56,9 +56,11 @@ document.addEventListener('keydown', (event) => {
 const responses = [
   { match: /skill|tool|java|c\+\+|web|html|css|javascript|program/i, text: 'Fariha works with Java (including JavaFX and JDBC), C++, and front-end web tools: HTML, CSS, and JavaScript. Her everyday toolkit also includes Git, GitHub, VS Code, and MySQL.' },
   { match: /melofocus|timer|productivity|study/i, text: 'MeloFocus is a gamified productivity timer with task rewards, a break bank, session tracking, and Basic, Dark, and Custom modes. Its JavaFX, web, and Chrome extension versions are all linked in the Projects section.' },
-  { match: /pika|running game|mini.game/i, text: 'Pika Run is a Java running game Fariha created as an academic project, with mini-games woven into the experience.' },
+  { match: /pika|running game|mini.game/i, text: 'Pika Run is a C++ running game Fariha created as an academic project, with mini-games woven into the experience.' },
+  { match: /aetna|game engine/i, text: 'Aetna is a C++ game engine Fariha developed as an academic project.' },
+  { match: /unravel|campus|java game/i, text: 'Unravel is Fariha’s Java game project, built around exploring a 3D campus world.' },
   { match: /theme|chrome|cinnamoroll|kurumi|hello kitty/i, text: 'Fariha has published six pastel Chrome themes, from Cinnamoroll Baby Blue to Kawaii Lavender Dream. You can browse them in the Themes section and open each one in the Chrome Web Store.' },
-  { match: /project|work|portfolio|made|build/i, text: 'Her work includes the three-generation MeloFocus project, a Chrome theme collection, this portfolio, Pika Run, a Candidate Key Finder, and a cache simulation. The Projects and Academics sections have the highlights.' },
+  { match: /project|work|portfolio|made|build/i, text: 'Her work includes the three-generation MeloFocus project, a Chrome theme collection, this portfolio, the Aetna game engine, Pika Run, Unravel, a Candidate Key Finder, and a cache simulation. The Projects and Academics sections have the highlights.' },
   { match: /contact|email|hire|linkedin|github|connect/i, text: 'The easiest way to reach Fariha is by email at farihamusfirat@gmail.com. Her GitHub and LinkedIn are also linked in the Contact section.' },
   { match: /about|who|fariha|shifa/i, text: 'Fariha Musfirat Shifa is a Computer Science undergraduate who enjoys thoughtful software, creative coding, browser customization, UI design, and turning ideas into real applications.' }
 ];
