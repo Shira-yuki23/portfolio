@@ -128,6 +128,20 @@
   background: linear-gradient(145deg, rgba(255, 250, 253, 0.68), rgba(229, 221, 255, 0.5));
 }
 
+.featured-products {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.featured-products .melo-showcase {
+  margin-bottom: 0;
+}
+
+.pastella-shot {
+  margin-bottom: 10px;
+}
+
 .melo-gallery {
   display: flex;
   gap: 12px;
@@ -300,6 +314,10 @@
 }
 
 @media (max-width: 860px) {
+  .featured-products {
+    grid-template-columns: 1fr;
+  }
+
   .melo-details {
     grid-template-columns: 1fr;
     gap: 18px;
